@@ -42,5 +42,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(navegarTelaSaldo);
             finish();
         });
+
+        binding.imgFaturas.setOnClickListener(view -> {
+            Intent navegarTelaFatura = new Intent(MainActivity.this, Fatura.class);
+            startActivity(navegarTelaFatura);
+            finish();
+        });
+
     }
 }
