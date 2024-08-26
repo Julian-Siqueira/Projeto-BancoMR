@@ -55,5 +55,10 @@ public class MainActivity extends AppCompatActivity {
             finish();
         });
 
+        binding.imgPoupanca.setOnClickListener(view -> {
+            Intent navegarTelaPoupanca = new Intent(MainActivity.this, Poupanca.class);
+            startActivity(navegarTelaPoupanca);
+            finish();
+        });
     }
 }
