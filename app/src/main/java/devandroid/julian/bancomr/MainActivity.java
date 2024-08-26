@@ -49,5 +49,11 @@ public class MainActivity extends AppCompatActivity {
             finish();
         });
 
+        binding.imgTransferencia.setOnClickListener(view -> {
+            Intent navegarTelaTransferencia = new Intent(MainActivity.this, Transferencia.class);
+            startActivity(navegarTelaTransferencia);
+            finish();
+        });
+
     }
 }

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BancoMR"
         tools:targetApi="31">
         <activity
+            android:name=".Transferencia"
+            android:exported="false" />
+        <activity
             android:name=".Fatura"
             android:exported="false" />
         <activity
