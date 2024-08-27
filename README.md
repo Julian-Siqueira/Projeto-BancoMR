@@ -2,7 +2,7 @@
 
 ![telaprincipal](https://github.com/user-attachments/assets/267dd2b8-c84c-477e-8739-59c9abf4952c)
 
-Projeto e bem básico, apenas verifica se vale a pena abastecer com Etanol ou Gasolina<br>
+Projeto bem simples, um app que simula um banco fictício<br>
 
 ## Telas do App
 Saldo | Fatura | Transferência | Poupança :<br>
