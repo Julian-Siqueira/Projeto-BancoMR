@@ -31,9 +31,6 @@ public class Fatura extends AppCompatActivity {
         getSupportActionBar().hide();
 
         binding.toolbarFatura.setNavigationOnClickListener(view -> {
-
-            Intent navegarTelaMain = new Intent(this, MainActivity.class);
-            startActivity(navegarTelaMain);
             finish();
         });
 

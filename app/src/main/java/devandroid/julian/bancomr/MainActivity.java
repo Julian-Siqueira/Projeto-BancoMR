@@ -3,6 +3,7 @@ package devandroid.julian.bancomr;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -14,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import devandroid.julian.bancomr.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ActivityMainBinding binding;
 
@@ -36,29 +37,28 @@ public class MainActivity extends AppCompatActivity {
             window.setStatusBarColor(this.getResources().getColor(R.color.blue));
         }
 
-        binding.imgSaldo.setOnClickListener(view ->{
+        binding.imgSaldo.setOnClickListener(this);
+        binding.imgFaturas.setOnClickListener(this);
+        binding.imgTransferencia.setOnClickListener(this);
+        binding.imgPoupanca.setOnClickListener(this);
+    }
 
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+
+        if (id == R.id.img_saldo) {
             Intent navegarTelaSaldo = new Intent(MainActivity.this, Saldo.class);
             startActivity(navegarTelaSaldo);
-            finish();
-        });
-
-        binding.imgFaturas.setOnClickListener(view -> {
+        } else if (id == R.id.img_faturas) {
             Intent navegarTelaFatura = new Intent(MainActivity.this, Fatura.class);
             startActivity(navegarTelaFatura);
-            finish();
-        });
-
-        binding.imgTransferencia.setOnClickListener(view -> {
+        } else if (id == R.id.img_transferencia) {
             Intent navegarTelaTransferencia = new Intent(MainActivity.this, Transferencia.class);
             startActivity(navegarTelaTransferencia);
-            finish();
-        });
-
-        binding.imgPoupanca.setOnClickListener(view -> {
+        } else {
             Intent navegarTelaPoupanca = new Intent(MainActivity.this, Poupanca.class);
             startActivity(navegarTelaPoupanca);
-            finish();
-        });
+        }
     }
 }
