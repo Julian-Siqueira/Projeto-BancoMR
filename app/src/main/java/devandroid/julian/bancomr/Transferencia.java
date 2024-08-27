@@ -29,9 +29,6 @@ public class Transferencia extends AppCompatActivity {
         getSupportActionBar().hide();
 
         binding.toolbarTransferencia.setNavigationOnClickListener(view -> {
-
-            Intent navegarTelaMain = new Intent(Transferencia.this, MainActivity.class);
-            startActivity(navegarTelaMain);
             finish();
         });
 

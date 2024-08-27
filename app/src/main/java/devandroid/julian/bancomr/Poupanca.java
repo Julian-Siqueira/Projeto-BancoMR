@@ -29,9 +29,6 @@ public class Poupanca extends AppCompatActivity {
         getSupportActionBar().hide();
 
         binding.toolbarPoupanca.setNavigationOnClickListener(view -> {
-
-            Intent navegarTelaMain = new Intent(Poupanca.this, MainActivity.class);
-            startActivity(navegarTelaMain);
             finish();
         });
     }

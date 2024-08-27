@@ -29,9 +29,7 @@ public class Saldo extends AppCompatActivity {
         getSupportActionBar().hide();
 
         binding.toolbarSaldo.setNavigationOnClickListener(view -> {
-
-            Intent navegarTelaMain = new Intent(this, MainActivity.class);
-            startActivity(navegarTelaMain);
+            finish();
         });
     }
 }
